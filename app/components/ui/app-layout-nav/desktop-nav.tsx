@@ -18,7 +18,7 @@ export default function DesktopNav({ links }: DesktopNavProps) {
       {links.map(({ name, href }) => (
         <Button key={`desktop-nav-link-${name}`} variant='link'>
           <Link href={href}>
-            {name}
+            {`[ ${name} ]`}
           </Link>
         </Button>
       ))}

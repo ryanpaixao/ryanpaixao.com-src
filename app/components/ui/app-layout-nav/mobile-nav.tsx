@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Menu as MenuIcon } from 'lucide-react';
 
 // Shadcn/ui components
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 
 type Link = {
@@ -29,6 +29,7 @@ export default function MobileNav({ links }: MobileNavProps ) {
       </SheetTrigger>
 
       <SheetContent side='left'>
+        <SheetTitle aria-describedby='mobile navigation menu' />
         <div className="flex flex-col items-start">
           {links.map(({ name, href }) => (
             <Button
@@ -39,7 +40,7 @@ export default function MobileNav({ links }: MobileNavProps ) {
               }}
             >
               <Link href={href}>
-                {name}
+                {`[ ${name} ]`}
               </Link>
             </Button>
           ))}
