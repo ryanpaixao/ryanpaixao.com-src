@@ -3,16 +3,16 @@ import MobileNav from './mobile-nav';
 
 const LINKS = [
   {
-    name: 'Home',
+    name: 'About',
     href: '/'
+  },
+  {
+    name: 'Skills',
+    href: '/skills'
   },
   {
     name: 'Projects',
     href: '/projects'
-  },
-  {
-    name: 'About',
-    href: '/about'
   },
   {
     name: 'Contact',
