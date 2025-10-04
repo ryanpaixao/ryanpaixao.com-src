@@ -22,8 +22,8 @@ const LINKS = [
 
 export default function SiteHeader() {
   return (
-    <header className='w-full border-b'>
-      <div className='flex h-14 items-center px-4'>
+    <header className='w-full border-b fixed bg-white dark:bg-gray-800'>
+      <div className='flex h-14 items-center px-4 dark:bg-red-500'>
         <DesktopNav links={LINKS} />
         <MobileNav links={LINKS} />
       </div>
