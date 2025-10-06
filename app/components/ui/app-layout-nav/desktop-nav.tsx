@@ -3,6 +3,8 @@ import Link from 'next/link';
 // Shadcn/ui components
 import { Button } from "@/components/ui/button";
 
+import ThemeSwitcher from '@/app/components/ui/theme-switcher';
+
 type Link = {
   name: string;
   href: string;
@@ -14,14 +16,19 @@ type DesktopNavProps = {
 
 export default function DesktopNav({ links }: DesktopNavProps) {
   return (
-    <div className="mr-4 hidden gap-2 md:flex">
-      {links.map(({ name, href }) => (
-        <Button key={`desktop-nav-link-${name}`} variant='link'>
-          <Link href={href}>
-            {`[ ${name} ]`}
-          </Link>
-        </Button>
-      ))}
+    <div className="flex justify-between w-full">
+      <div className="mr-4 hidden gap-2 md:flex">
+        {links.map(({ name, href }) => (
+          <Button key={`desktop-nav-link-${name}`} variant='link'>
+            <Link href={href}>
+              {`[ ${name} ]`}
+            </Link>
+          </Button>
+        ))}
+      </div>
+      <div>
+        <ThemeSwitcher />
+      </div>
     </div>
   );
 }
