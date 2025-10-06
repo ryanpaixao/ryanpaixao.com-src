@@ -8,6 +8,8 @@ import { Menu as MenuIcon } from 'lucide-react';
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 
+import ThemeSwitcher from '@/app/components/ui/theme-switcher';
+
 type Link = {
   name: string;
   href: string;
@@ -22,11 +24,14 @@ export default function MobileNav({ links }: MobileNavProps ) {
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger asChild>
-        <Button variant='ghost' size='icon' className="md:hidden">
-          <MenuIcon />
-        </Button>
-      </SheetTrigger>
+      <div className="flex w-full justify-between md:hidden">
+        <SheetTrigger asChild>
+          <Button variant='ghost' size='icon'>
+            <MenuIcon />
+          </Button>
+        </SheetTrigger>
+        <ThemeSwitcher />
+      </div>
 
       <SheetContent side='left'>
         <SheetTitle aria-describedby='mobile navigation menu' />
