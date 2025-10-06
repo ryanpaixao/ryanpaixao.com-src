@@ -16,8 +16,8 @@ type DesktopNavProps = {
 
 export default function DesktopNav({ links }: DesktopNavProps) {
   return (
-    <div className="flex justify-between w-full">
-      <div className="mr-4 hidden gap-2 md:flex">
+    <div className="hidden md:flex justify-between w-full">
+      <div className="mr-4 gap-2">
         {links.map(({ name, href }) => (
           <Button key={`desktop-nav-link-${name}`} variant='link'>
             <Link href={href}>
