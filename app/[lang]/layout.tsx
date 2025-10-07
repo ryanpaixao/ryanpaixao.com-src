@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ryan Paixao",
+  title: "ryanPaixao( )",
   description: "Ryan Paixao's Personal Site",
 };
 
