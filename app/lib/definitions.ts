@@ -11,6 +11,8 @@ export type Dictionary = {
   }
 };
 
+export type AvailableLanguages = 'en' | 'pt';
+
 export type LangParams = {
-  lang: 'en' | 'pt';
+  lang: AvailableLanguages;
 };
