@@ -10,3 +10,7 @@ export type Dictionary = {
     }
   }
 };
+
+export type LangParams = {
+  lang: 'en' | 'pt';
+};

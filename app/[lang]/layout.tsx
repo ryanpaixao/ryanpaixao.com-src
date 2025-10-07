@@ -5,6 +5,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import SiteHeader from '@/app/components/ui/app-layout-nav/site-header';
 import "@/app/globals.css";
 import { getDictionary } from '@/app/lib/dictionaries';
+import { LangParams } from '@/app/lib/definitions';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,9 +24,7 @@ export const metadata: Metadata = {
 
 type PageProps = {
   children: Readonly<React.ReactNode>;
-  params: {
-    lang: 'en' | 'pt';
-  };
+  params: LangParams;
 };
 
 export default async function RootLayout({
