@@ -35,11 +35,11 @@ export default async function RootLayout({
   const dict = await getDictionary(lang);
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
           <div className="flex min-h-screen flex-col">
-            <SiteHeader dict={dict} />
+            <SiteHeader dict={dict} currentLang={lang} />
             <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 bg-green-500 dark:bg-red-500">
               <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
                 {children}

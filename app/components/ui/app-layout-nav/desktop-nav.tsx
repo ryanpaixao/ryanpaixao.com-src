@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 
 import ThemeSwitcher from '@/app/components/ui/theme-switcher';
+import LanguageSwitcher from '@/app/components/ui/language-switcher';
+import { AvailableLanguages } from '@/app/lib/definitions';
 
 type Link = {
   name: string;
@@ -11,10 +13,11 @@ type Link = {
 };
 
 type DesktopNavProps = {
-  links: Link[]
+  links: Link[];
+  currentLang: AvailableLanguages;
 }
 
-export default function DesktopNav({ links }: DesktopNavProps) {
+export default function DesktopNav({ links, currentLang }: DesktopNavProps) {
   return (
     <div className="hidden md:flex justify-between w-full">
       <div className="mr-4 gap-2">
@@ -26,7 +29,8 @@ export default function DesktopNav({ links }: DesktopNavProps) {
           </Button>
         ))}
       </div>
-      <div>
+      <div className='flex flex-row justify-between gap-1'>
+        <LanguageSwitcher currentLang={currentLang} />
         <ThemeSwitcher />
       </div>
     </div>

@@ -9,6 +9,8 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/s
 import { Button } from "@/components/ui/button";
 
 import ThemeSwitcher from '@/app/components/ui/theme-switcher';
+import LanguageSwitcher from '@/app/components/ui/language-switcher';
+import { AvailableLanguages } from '@/app/lib/definitions';
 
 type Link = {
   name: string;
@@ -16,10 +18,11 @@ type Link = {
 };
 
 type MobileNavProps = {
-  links: Link[]
+  links: Link[];
+  currentLang: AvailableLanguages;
 };
 
-export default function MobileNav({ links }: MobileNavProps ) {
+export default function MobileNav({ links, currentLang }: MobileNavProps ) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -30,7 +33,10 @@ export default function MobileNav({ links }: MobileNavProps ) {
             <MenuIcon />
           </Button>
         </SheetTrigger>
-        <ThemeSwitcher />
+        <div className='flex flex-row gap-1'>
+          <ThemeSwitcher />
+          <LanguageSwitcher currentLang={currentLang} />
+        </div>
       </div>
 
       <SheetContent side='left'>

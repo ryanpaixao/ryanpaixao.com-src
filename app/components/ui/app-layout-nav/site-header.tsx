@@ -1,36 +1,38 @@
-import { Dictionary } from '@/app/lib/definitions';
+import { Dictionary, AvailableLanguages } from '@/app/lib/definitions';
 import DesktopNav from './desktop-nav';
 import MobileNav from './mobile-nav';
 
 type SiteHeaderProps = {
   dict: Dictionary;
+  currentLang: AvailableLanguages;
 }
 
-export default function SiteHeader({ dict }: SiteHeaderProps) {
+export default function SiteHeader({ dict, currentLang }: SiteHeaderProps) {
+  const { about, skills, projects, contact } = dict.siteHeader.nav.links;
   const LINKS = [
     {
-      name: dict.siteHeader.nav.links.about,
-      href: '/'
+      name: about,
+      href: `/${currentLang}/`
     },
     {
-      name: dict.siteHeader.nav.links.skills,
-      href: '/skills'
+      name: skills,
+      href: `/${currentLang}/skills`
     },
     {
-      name: dict.siteHeader.nav.links.projects,
-      href: '/projects'
+      name: projects,
+      href: `/${currentLang}/projects`
     },
     {
-      name: dict.siteHeader.nav.links.contact,
-      href: '/contact'
+      name: contact,
+      href: `/${currentLang}/contact`
     },
   ];
 
   return (
     <header className='w-full border-b fixed bg-white dark:bg-gray-800'>
       <div className='flex h-14 items-center px-4 dark:bg-red-500'>
-        <DesktopNav links={LINKS} />
-        <MobileNav links={LINKS} />
+        <DesktopNav links={LINKS} currentLang={currentLang} />
+        <MobileNav links={LINKS} currentLang={currentLang} />
       </div>
     </header>
   );
