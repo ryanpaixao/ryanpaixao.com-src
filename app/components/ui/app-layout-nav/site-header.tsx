@@ -1,26 +1,31 @@
+import { Dictionary } from '@/app/lib/definitions';
 import DesktopNav from './desktop-nav';
 import MobileNav from './mobile-nav';
 
-const LINKS = [
-  {
-    name: 'About',
-    href: '/'
-  },
-  {
-    name: 'Skills',
-    href: '/skills'
-  },
-  {
-    name: 'Projects',
-    href: '/projects'
-  },
-  {
-    name: 'Contact',
-    href: '/contact'
-  },
-];
+type SiteHeaderProps = {
+  dict: Dictionary;
+}
 
-export default function SiteHeader() {
+export default function SiteHeader({ dict }: SiteHeaderProps) {
+  const LINKS = [
+    {
+      name: dict.siteHeader.nav.links.about,
+      href: '/'
+    },
+    {
+      name: dict.siteHeader.nav.links.skills,
+      href: '/skills'
+    },
+    {
+      name: dict.siteHeader.nav.links.projects,
+      href: '/projects'
+    },
+    {
+      name: dict.siteHeader.nav.links.contact,
+      href: '/contact'
+    },
+  ];
+
   return (
     <header className='w-full border-b fixed bg-white dark:bg-gray-800'>
       <div className='flex h-14 items-center px-4 dark:bg-red-500'>
