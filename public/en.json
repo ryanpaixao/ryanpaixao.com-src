@@ -1,0 +1,12 @@
+{
+  "siteHeader": {
+    "nav": {
+      "links": {
+        "about": "About",
+        "skills": "Skills",
+        "projects": "Projects",
+        "contact": "Contact"
+      }
+    }
+  }
+}
