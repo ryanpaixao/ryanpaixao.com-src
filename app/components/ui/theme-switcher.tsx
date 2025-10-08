@@ -20,7 +20,7 @@ export default function ThemeSwitcher() {
 
   return (
     <Button size='icon' variant='ghost' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-      {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+      {theme === 'dark' ? <MoonIcon /> : <SunIcon />}
     </Button>
   );
 }

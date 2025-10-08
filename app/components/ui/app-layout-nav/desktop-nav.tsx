@@ -23,7 +23,9 @@ export default function DesktopNav({ links, currentLang }: DesktopNavProps) {
       <div className="mr-4 gap-2">
         {links.map(({ name, href }) => (
           <Button key={`desktop-nav-link-${name}`} variant='link'>
-            <Link href={href}>
+            <Link 
+              href={href}
+            >
               {`[ ${name} ]`}
             </Link>
           </Button>
