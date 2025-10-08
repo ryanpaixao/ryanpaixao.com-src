@@ -8,5 +8,41 @@
         "contact": "Contact"
       }
     }
+  },
+  "projectsPage": {
+    "item": {
+      "description": "Description"
+    },
+    "iHaveNotions": {
+      "title": "I Have Notions",
+      "description": "An app written in Portuguese that explains the typology of the Enneagram personality types.",
+      "stack": "A Vue v3.5.x, NodeJS v22.17, Express v5.1 SPA that has a database that is stored in the productivity app Notion.",
+      "siteHref": "https://i-have-notions.netlify.app/",
+      "githubHrefs": ["https://github.com/ryanpaixao/I-have-notions"]
+    },
+    "localDeepseek": {
+      "title": "Local Deepseek",
+      "description": "A Python repository that allows me to run different deekseek models on my local machine (NVIDIA GeForce RTX 3050, only 4GB of VRAM).",
+      "siteHref": "",
+      "stack": "Using Venv, Python v3.11.2, Cuda compilation tools@ v11.8.89, Nvidia driver v535.247.01 (supports up to CUDA v12.2)",
+      "githubHrefs": ["https://github.com/ryanpaixao/local_deepseek"]
+    },
+    "productivityDash": {
+      "title": "Productivity Dash",
+      "description": "An app that tracks your tasks, habits, and moods. It can also visualize trends.",
+      "stack": "The frontend uses React v19, chart.js v4.4.9, tanstack/react-query v5.76. The backend uses NodeJS v22.17, Express v5.1.0, and MongoDB v6.18",
+      "siteHref": "https://wonderful-semifreddo-optimized.netlify.app/",
+      "githubHrefs": [
+        "https://github.com/ryanpaixao/productivity-dashboard-frontend",
+        "https://github.com/ryanpaixao/productivity-dashboard-backend"
+      ]
+    },
+    "dashCap": {
+      "title": "Dash Cap",
+      "description": "A financial dashboard to keep track of customers and invoices.",
+      "stack": "A NextJS v15.3.2 app that uses typescript and tailwindcss v3.4.17.",
+      "siteHref": "https://dash-cap.vercel.app",
+      "githubHrefs": ["https://github.com/ryanpaixao/dash-cap"]
+    }
   }
 }
