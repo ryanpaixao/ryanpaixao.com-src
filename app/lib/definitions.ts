@@ -9,6 +9,12 @@ export type Dictionary = {
       }
     }
   },
+  aboutPage: {
+    pageHeaderTitle: string;
+  },
+  skillsPage: {
+    pageHeaderTitle: string;
+  },
   projectsPage: {
     pageHeaderTitle: string;
     item: {
