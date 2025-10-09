@@ -12,7 +12,7 @@ export default function SiteHeader({ dict, currentLang }: SiteHeaderProps) {
   const LINKS = [
     {
       name: about,
-      href: `/${currentLang}/`
+      href: `/${currentLang}/about`
     },
     {
       name: skills,

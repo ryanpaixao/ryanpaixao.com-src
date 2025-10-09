@@ -13,7 +13,7 @@ export default async function Home({ params }: PageParams) {
 
   return (
     <div>
-      Home Page ({dict.siteHeader.nav.links.about})
+      Home Page ({dict.siteHeader.nav.links.about}?)
     </div>
   );
 }

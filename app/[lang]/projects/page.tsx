@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { LangParams } from '@/app/lib/definitions';
 import { getDictionary } from "@/app/lib/dictionaries";
+import PageHeaderTitle from '@/app/components/ui/page-header-title';
 
 interface ProjectsPageProps {
   params: LangParams;
@@ -20,16 +21,16 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
 
   return (
     <div>
-      <h1 className="text-4xl mb-5 font-extrabold">
-        {`<${dict.projectsPage.pageHeaderTitle}>`}
-      </h1>
+      <PageHeaderTitle>
+        {dict.projectsPage.pageHeaderTitle}
+      </PageHeaderTitle>
       <ol>
         {PROJECTS.map((project, i) => {
           return (
             <li key={`project-${i}`} className="flex flex-col mb-4">
               <div>
-                <b className="text-2xl">
-                  {`[${i}] ${project.title}`}
+                <b className="text-2xl dark:text-gray-400 text-gray-600">
+                  {`[${i}].${project.title}`}
                 </b>
               </div>
               <div className="pl-2 mb-2">

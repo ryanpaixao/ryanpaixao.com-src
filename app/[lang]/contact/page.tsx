@@ -1,6 +1,7 @@
+import UiLink from "@/app/components/ui/ext-link";
+import PageHeaderTitle from '@/app/components/ui/page-header-title';
 import { LangParams } from "@/app/lib/definitions";
 import { getDictionary } from "@/app/lib/dictionaries";
-import UiLink from "@/app/components/ui/ext-link";
 
 interface ContactPageProps {
   params: LangParams;
@@ -12,9 +13,9 @@ export default async function ContactPage({ params }: ContactPageProps) {
 
   return (
     <div>
-      <h1 className="text-4xl mb-5 font-extrabold">
-        {`<${dict.contactPage.pageHeaderTitle}>`}
-      </h1>
+      <PageHeaderTitle>
+        {dict.contactPage.pageHeaderTitle}
+      </PageHeaderTitle>
       <ol>
         <li className="flex flex-col mb-4">
           <div>
