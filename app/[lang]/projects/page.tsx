@@ -21,7 +21,7 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
   return (
     <div>
       <h1 className="text-4xl mb-5 font-extrabold">
-        {`<Projects>`}
+        {`<${dict.projectsPage.pageHeaderTitle}>`}
       </h1>
       <ol>
         {PROJECTS.map((project, i) => {
@@ -71,14 +71,14 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
                   {`Github => `}
                 </p>
                 <ul className="mb-2">
-                  {project.githubHrefs.map((href, j) => {
+                  {project.githubUrls.map((url, j) => {
                     return (
                       <li key={`${i}-github-${j}`} className="pl-2">
                         <Link
                           className="w-full text-green-400"
-                          href={href}
+                          href={url}
                         >
-                          {`-- ${href}`}
+                          {`-- ${url}`}
                         </Link>
                       </li>
                     );

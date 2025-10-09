@@ -10,6 +10,7 @@ export type Dictionary = {
     }
   },
   projectsPage: {
+    pageHeaderTitle: string;
     item: {
       description: string;
     },
@@ -18,29 +19,35 @@ export type Dictionary = {
       description: string;
       stack: string;
       siteHref: string;
-      githubHrefs: [];
+      githubUrls: [];
     },
     localDeepseek: {
       title: string;
       description: string;
       stack: string;
       siteHref: string;
-      githubHrefs: [];
+      githubUrls: [];
     },
     productivityDash: {
       title: string;
       description: string;
       stack: string;
       siteHref: string;
-      githubHrefs: [];
+      githubUrls: [];
     },
     dashCap: {
       title: string;
       description: string;
       stack: string;
       siteHref: string;
-      githubHrefs: [];
+      githubUrls: [];
     }
+  },
+  contactPage: {
+    pageHeaderTitle: string;
+    personalEmail: string;
+    personalGithub: string;
+    personalLinkedIn: string;
   }
 };
 
