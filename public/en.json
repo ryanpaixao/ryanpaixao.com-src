@@ -50,6 +50,13 @@
       "stack": "A NextJS v15.3.2 app that uses typescript and tailwindcss v3.4.17.",
       "siteHref": "https://dash-cap.vercel.app",
       "githubUrls": ["https://github.com/ryanpaixao/dash-cap"]
+    },
+    "ryanpaixaoCom": {
+      "title": "Ryanpaixao_Com",
+      "description": "My professional website. (The site you're on right now.)",
+      "stack": "A NextJS v15.5.4 app that uses typescript and tailwindcss v4.",
+      "siteHref": "https://ryanpaixao.com",
+      "githubUrls": ["https://github.com/ryanpaixao/ryanpaixao.com-src"]
     }
   },
   "contactPage": {

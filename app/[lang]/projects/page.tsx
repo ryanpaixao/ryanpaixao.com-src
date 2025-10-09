@@ -17,6 +17,7 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
     dict.projectsPage.localDeepseek,
     dict.projectsPage.productivityDash,
     dict.projectsPage.dashCap,
+    dict.projectsPage.ryanpaixaoCom
   ];
 
   return (

@@ -47,6 +47,13 @@ export type Dictionary = {
       stack: string;
       siteHref: string;
       githubUrls: [];
+    },
+    ryanpaixaoCom: {
+      title: string;
+      description: string;
+      stack: string;
+      siteHref: string;
+      githubUrls: [];
     }
   },
   contactPage: {
