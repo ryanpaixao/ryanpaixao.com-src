@@ -40,7 +40,7 @@ export default async function RootLayout({
         <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
           <div className="flex min-h-screen flex-col">
             <SiteHeader dict={dict} currentLang={lang} />
-            <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-10 sm:p-20">
+            <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-4 sm:p-20">
               <main className="flex flex-col gap-[16px] row-start-2 items-center sm:items-start">
                 {children}
               </main>

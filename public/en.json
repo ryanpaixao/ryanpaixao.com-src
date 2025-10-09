@@ -16,7 +16,7 @@
     "iHaveNotions": {
       "title": "I Have Notions",
       "description": "An app written in Portuguese that explains the typology of the Enneagram personality types.",
-      "stack": "A Vue v3.5.x, NodeJS v22.17, Express v5.1 SPA that has a database that is stored in the productivity app Notion.",
+      "stack": "A Vue v3.5.x, Vite v7.0.0, NodeJS v22.17, Express v5.1 SPA that has a database that is stored in the productivity app Notion.",
       "siteHref": "https://i-have-notions.netlify.app/",
       "githubHrefs": ["https://github.com/ryanpaixao/I-have-notions"]
     },
