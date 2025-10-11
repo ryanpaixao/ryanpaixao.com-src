@@ -10,7 +10,15 @@
     }
   },
   "aboutPage": {
-    "pageHeaderTitle": "About"
+    "pageHeaderTitle": "About",
+    "aboutParagraphs": [
+      "A curious full-stack developer who builds dynamic web experiences by day, and a strategic gamer & world cuisine explorer by night.",
+      "For over 7 years, I've specialized in craftting engaging and performant front-end expereiences using modern tools like ReactJS and Vue. My passion lies in tinkering with code. Deconstructing complex problems and building elegant solutions from the ground up.",
+      "While I'm front-end focused, I'm comfortable across the stack, working with Node.js, Python, and a variety of databases to bring projects to life.",
+      "My love for strategy games isn't just a pastime. It's how I exercise my problem-solving muscles, thinking through architecture and user flow like a game of chess (Magic The Gathering).",
+      "When I'm not coding, you'll find me in the kitchen, which I treat as my own personal lab. The process of following a recipe, of modifying an existing recipe, or creating one of my own, mirror my approach to development. Understanding the core components, experimenting with new flavors of libraries, and iterating until it's just right. This same curiosity drives me to constantly learn new technologies and explore how things work under the hood.",
+      "Enjoyed learning about my approach? Check out my Projects page to see my work in action, or head over to my Contact page to discuss how we can build something amazing together."
+    ]
   },
   "skillsPage": {
     "pageHeaderTitle": "Skills"

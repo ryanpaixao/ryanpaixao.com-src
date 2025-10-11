@@ -15,6 +15,18 @@ export default async function Page({ params }: AboutPageProps) {
       <PageHeaderTitle>
         {dict.aboutPage.pageHeaderTitle}
       </PageHeaderTitle>
+      <div>
+        {dict.aboutPage.aboutParagraphs.map((paragraph, index) => {
+          return (
+            <p
+              key={`about-para-${index}`}
+              className='mb-3'
+            >
+              {paragraph}
+            </p>
+          )
+        })}
+      </div>
     </div>
   );
 }

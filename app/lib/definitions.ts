@@ -11,6 +11,7 @@ export type Dictionary = {
   },
   aboutPage: {
     pageHeaderTitle: string;
+    aboutParagraphs: [string];
   },
   skillsPage: {
     pageHeaderTitle: string;
@@ -25,35 +26,35 @@ export type Dictionary = {
       description: string;
       stack: string;
       siteHref: string;
-      githubUrls: [];
+      githubUrls: [string];
     },
     localDeepseek: {
       title: string;
       description: string;
       stack: string;
       siteHref: string;
-      githubUrls: [];
+      githubUrls: [string];
     },
     productivityDash: {
       title: string;
       description: string;
       stack: string;
       siteHref: string;
-      githubUrls: [];
+      githubUrls: [string];
     },
     dashCap: {
       title: string;
       description: string;
       stack: string;
       siteHref: string;
-      githubUrls: [];
+      githubUrls: [string];
     },
     ryanpaixaoCom: {
       title: string;
       description: string;
       stack: string;
       siteHref: string;
-      githubUrls: [];
+      githubUrls: [string];
     }
   },
   contactPage: {
