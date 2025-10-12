@@ -8,15 +8,15 @@ type SiteHeaderProps = {
 }
 
 export default function SiteHeader({ dict, currentLang }: SiteHeaderProps) {
-  const { about, skills, projects, contact } = dict.siteHeader.nav.links;
+  const { about, experience, projects, contact } = dict.siteHeader.nav.links;
   const LINKS = [
     {
       name: about,
       href: `/${currentLang}/about`
     },
     {
-      name: skills,
-      href: `/${currentLang}/skills`
+      name: experience,
+      href: `/${currentLang}/experience`
     },
     {
       name: projects,

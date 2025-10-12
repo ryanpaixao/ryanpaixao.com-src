@@ -3,7 +3,7 @@ export type Dictionary = {
     nav: {
       links: {
         about: string;
-        skills: string;
+        experience: string;
         projects: string;
         contact: string;
       }
@@ -13,8 +13,24 @@ export type Dictionary = {
     pageHeaderTitle: string;
     aboutParagraphs: [string];
   },
-  skillsPage: {
+  experiencePage: {
     pageHeaderTitle: string;
+    experiences: [
+      {
+        companyName: string;
+        jobTitle: string;
+        timeWorked: string;
+        location: string;
+        jobDescription: string;
+      },
+      {
+        companyName: string;
+        jobTitle: string;
+        timeWorked: string;
+        location: string;
+        jobDescription: string;
+      }
+    ]
   },
   projectsPage: {
     pageHeaderTitle: string;
