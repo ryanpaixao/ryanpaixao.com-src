@@ -1,3 +1,19 @@
+interface Experience {
+  companyName: string;
+  jobTitle: string;
+  timeWorked: string;
+  positionType: string;
+  location: string;
+  jobDescription: string;
+};
+interface Project {
+  title: string;
+  description: string;
+  stack: string;
+  siteHref: string;
+  githubUrls: [string];
+};
+
 export type Dictionary = {
   siteHeader: {
     nav: {
@@ -15,63 +31,19 @@ export type Dictionary = {
   },
   experiencePage: {
     pageHeaderTitle: string;
-    experiences: [
-      {
-        companyName: string;
-        jobTitle: string;
-        timeWorked: string;
-        location: string;
-        jobDescription: string;
-      },
-      {
-        companyName: string;
-        jobTitle: string;
-        timeWorked: string;
-        location: string;
-        jobDescription: string;
-      }
-    ]
+    type: string;
+    experiences: [Experience]
   },
   projectsPage: {
     pageHeaderTitle: string;
     item: {
       description: string;
     },
-    iHaveNotions: {
-      title: string;
-      description: string;
-      stack: string;
-      siteHref: string;
-      githubUrls: [string];
-    },
-    localDeepseek: {
-      title: string;
-      description: string;
-      stack: string;
-      siteHref: string;
-      githubUrls: [string];
-    },
-    productivityDash: {
-      title: string;
-      description: string;
-      stack: string;
-      siteHref: string;
-      githubUrls: [string];
-    },
-    dashCap: {
-      title: string;
-      description: string;
-      stack: string;
-      siteHref: string;
-      githubUrls: [string];
-    },
-    ryanpaixaoCom: {
-      title: string;
-      description: string;
-      stack: string;
-      siteHref: string;
-      githubUrls: [string];
-    }
+    iHaveNotions: Project,
+    localDeepseek: Project,
+    productivityDash: Project,
+    dashCap: Project,
+    ryanpaixaoCom: Project
   },
   contactPage: {
     pageHeaderTitle: string;

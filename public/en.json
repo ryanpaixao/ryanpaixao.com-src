@@ -22,11 +22,13 @@
   },
   "experiencePage": {
     "pageHeaderTitle": "Experience",
+    "type": "Position type",
     "experiences": [
       {
         "companyName": "BelugaCDN",
         "jobTitle": "Frontend Developer",
         "timeWorked": "April 2016 - March 2018",
+        "positionType": "Remote",
         "location": "Sunny Isles, FL. USA",
         "jobDescription": "Helped manage existing product site, and user interface, as well as adding new features. Used TDD, BDD, and Unit Testing to ensure code coverage. React.js, and Bootstrap were used to make for quicker, and more responsive sites. Created a Grafana Application Plugin for BelugaCDN clients to use."
       },
@@ -34,6 +36,7 @@
         "companyName": "Newfold Digital (formally Endurance Group)",
         "jobTitle": "Software Engineer II",
         "timeWorked": "July 2018 - December 2023",
+        "positionType": "Remote",
         "location": "Burlington, MA. USA",
         "jobDescription": "Was a part of the Innovation team. Worked on different frontend aspects pertaining to the Sitebuilder product. Helped incorporate ecommerce functionality into the company's Express Editor. Was a part of creating a new Social Booster ability in Sitebuilder. Which allows users to schedule posts and manage accounts linked to user’s Facebook, Twitter, and Google My Business."
       }
