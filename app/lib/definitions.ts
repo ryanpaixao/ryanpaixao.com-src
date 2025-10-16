@@ -25,6 +25,17 @@ export type Dictionary = {
       }
     }
   },
+  interactiveCodeEditor: {
+    aboutMeFile: string;
+    skipCTA: string;
+    codeSnippets: [string];
+  },
+  homePage: {
+    hello: string;
+    description: string;
+    primaryCTA: string;
+    secondaryCTA: string;
+  },
   aboutPage: {
     pageHeaderTitle: string;
     aboutParagraphs: [string];

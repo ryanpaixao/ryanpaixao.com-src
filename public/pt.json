@@ -9,6 +9,21 @@
       }
     }
   },
+  "interactiveCodeEditor": {
+    "aboutMeFile": "sobre_mim.js",
+    "skipCTA": "Clique para pular ->",
+    "codeSnippets": [
+      "// Bem-vindo ao meu espaço digital\nconst desenvolvedor = {\n  nome: 'Ryan Paixão',\n  foco: 'full-stack',\n  paixao: 'resolver_problemas_criativamente',\n  linguagens: ['JavaScript', 'Python', 'Português', 'Inglês']\n};",
+      "// 7+ anos criando experiências digitais\nfunction construirSolucao(problema) {\n  const criatividade = encontrarAbordagemCriativa(problema);\n  return React.memo(implementacao => {\n    return inovar(problema);\n  });\n}",
+      "// Além do código\nconst interesses = {\n  jogosEstrategia: ['Magic The Gathering', 'Ticket to Ride', 'Catan'],\n  culinaria: 'Fusão de culinária global',\n  aprendizado: 'Sempre curioso'\n};"
+    ]
+  },
+  "homePage": {
+    "hello": "Olá, eu sou Ryan Paixão",
+    "description": "Desenvolvedor Full-Stack & Solucionador Criativo de Problemas",
+    "primaryCTA": "Ver Projectos",
+    "secondaryCTA": "Entrar em Contato"
+  },
   "aboutPage": {
     "pageHeaderTitle": "Sobre",
     "aboutParagraphs": [

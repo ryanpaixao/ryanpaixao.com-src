@@ -1,0 +1,164 @@
+/* components/InteractiveCodeEditor.css */
+.interactive-code-editor {
+  background: var(--editor-bg, #1e1e1e);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--editor-border, #333);
+}
+
+.interactive-code-editor:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.interactive-code-editor:active {
+  transform: translateY(0);
+}
+
+.editor-header {
+  background: var(--editor-header-bg, #2d2d2d);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--editor-border, #333);
+}
+
+.window-controls {
+  display: flex;
+  gap: 8px;
+  margin-right: 16px;
+}
+
+.control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.control.close { background: #ff5f57; }
+.control.minimize { background: #ffbd2e; }
+.control.maximize { background: #28ca42; }
+
+.file-name {
+  color: var(--text-secondary, #888);
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9em;
+}
+
+.editor-content {
+  padding: 20px;
+  min-height: 200px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.code-display {
+  margin: 0;
+  color: var(--code-text, #e0e0e0);
+  font-family: 'Fira Code', 'Monaco', 'Cascadia Code', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  position: relative;
+  width: 100%;
+}
+
+/* Syntax Highlighting */
+.comment { color: #6a9955; font-style: italic; }
+.keyword { color: #569cd6; font-weight: bold; }
+.string { color: #ce9178; }
+.number { color: #b5cea8; }
+.function { color: #dcdcaa; }
+.property { color: #9cdcfe; }
+
+/* Blinking Cursor */
+.cursor {
+  display: inline-block;
+  background: var(--cursor-color, #569cd6);
+  width: 2px;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+  vertical-align: middle;
+  height: 1.2em;
+}
+
+.cursor.visible {
+  opacity: 1;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.editor-footer {
+  padding: 12px 16px;
+  background: var(--editor-header-bg, #2d2d2d);
+  border-top: 1px solid var(--editor-border, #333);
+  text-align: right;
+}
+
+.hint {
+  color: var(--text-secondary, #888);
+  font-size: 0.8em;
+  font-family: 'Fira Code', monospace;
+}
+
+/* Theme Variables for Light/Dark Mode */
+:root[data-theme="light"] {
+  --editor-bg: #f5f5f5;
+  --editor-header-bg: #e0e0e0;
+  --editor-border: #ccc;
+  --code-text: #333;
+  --cursor-color: #569cd6;
+  --text-secondary: #666;
+}
+
+:root[data-theme="dark"] {
+  --editor-bg: #1e1e1e;
+  --editor-header-bg: #2d2d2d;
+  --editor-border: #333;
+  --code-text: #e0e0e0;
+  --cursor-color: #569cd6;
+  --text-secondary: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .interactive-code-editor {
+    margin: 0 16px;
+    font-size: 12px;
+  }
+  
+  .editor-content {
+    padding: 16px;
+  }
+  
+  .code-display {
+    font-size: 12px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .interactive-code-editor {
+    margin: 0 8px;
+  }
+  
+  .editor-content {
+    padding: 12px;
+  }
+  
+  .code-display {
+    font-size: 11px;
+  }
+}
