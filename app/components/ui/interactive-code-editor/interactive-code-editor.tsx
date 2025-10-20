@@ -10,6 +10,22 @@ type CodeEditorProps = {
   dict: Dictionary;
 };
 
+const addYearsOfExperience = (snippet: string) => {
+  const today = new Date();
+  const lastEmployedDate = new Date('2023-12-08');
+  const yearOffset = Math.round((+today - +lastEmployedDate) / (1000 * 60 * 60 * 24 * 365.25)); // TODO: Update me when employed again!
+  const startingDate = new Date('2016-04-01');
+  let yearsOfExp = today.getFullYear() - startingDate.getFullYear() - yearOffset;
+
+  // if current month/day is before the starting month/day, subtract 1
+  const month = today.getMonth() - startingDate.getMonth();
+  if (month < 0 || (month === 0 && today.getDate() < startingDate.getDate())) {
+    yearsOfExp--;
+  }
+
+  return snippet.replace('{yearsOfExperience}', `${yearsOfExp}`);
+};
+
 const InteractiveCodeEditor = ({ dict }: CodeEditorProps) => {
   const [currentCode, setCurrentCode] = useState('');
   const [currentSnippetIndex, setCurrentSnippetIndex] = useState(0);
@@ -20,7 +36,9 @@ const InteractiveCodeEditor = ({ dict }: CodeEditorProps) => {
   // Typing and deleting
   useEffect(() => {
     const snippets = dict.interactiveCodeEditor.codeSnippets;
-    const currentSnippet = snippets[currentSnippetIndex];
+    const currentSnippet = currentSnippetIndex === 1
+      ? addYearsOfExperience(snippets[1])
+      : snippets[currentSnippetIndex];
 
     let typingTimeout: NodeJS.Timeout | undefined;
     let currentIndex = 0;

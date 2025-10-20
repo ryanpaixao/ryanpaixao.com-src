@@ -14,7 +14,7 @@
     "skipCTA": "Click anywhere to skip ->",
     "codeSnippets": [
       "// Welcome to my digital space\nconst developer = {\n  name: 'Ryan Paixao',\n  focus: 'full-stack',\n  passion: 'creative_problem_solving',\n  languages: ['JavaScript', 'Python', 'Portuguese', 'English']\n};",
-      "// 7+ years crafting digital experiences\nfunction buildSolution(problem) {\n  const creativity = findCreativeApproach(problem);\n  return React.memo(implementation => {\n    return innovative(problem);\n  });\n}",
+      "// {yearsOfExperience}+ years crafting digital experiences\nfunction buildSolution(problem) {\n  const creativity = findCreativeApproach(problem);\n  return React.memo(implementation => {\n    return innovative(problem);\n  });\n}",
       "// Beyond code\nconst interests = {\n  strategyGames: ['Magic The Gathering', 'Ticket to Ride', 'Catan'],\n  cooking: 'Global cuisine fusion',\n  learning: 'Always curious'\n};"
     ]
   },
