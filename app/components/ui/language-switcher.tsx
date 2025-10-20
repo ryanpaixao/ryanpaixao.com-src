@@ -4,17 +4,15 @@ import { useRouter, usePathname } from 'next/navigation';
 import { Languages } from 'lucide-react';
 import { Toggle } from '@/components/ui/toggle';
 
-import { AvailableLanguages } from '@/app/lib/definitions';
-
 interface LanguageSwitcherProps {
-  currentLang: AvailableLanguages;
+  currentLang: string;
 }
 
 export default function LanguageSwitcher({ currentLang }: LanguageSwitcherProps ) {
   const router = useRouter();
   const pathname = usePathname();
 
-  const switchLanguage = (newLang: AvailableLanguages) => {
+  const switchLanguage = (newLang: string) => {
     // Replaces the current locale in the pathname with the new one
     const newPathname = pathname.replace(/^\/[^\/]+/, `/${newLang}`);
     

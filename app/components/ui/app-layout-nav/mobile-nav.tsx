@@ -10,7 +10,6 @@ import { Button } from "@/components/ui/button";
 
 import ThemeSwitcher from '@/app/components/ui/theme-switcher';
 import LanguageSwitcher from '@/app/components/ui/language-switcher';
-import { AvailableLanguages } from '@/app/lib/definitions';
 
 type Link = {
   name: string;
@@ -19,7 +18,7 @@ type Link = {
 
 type MobileNavProps = {
   links: Link[];
-  currentLang: AvailableLanguages;
+  currentLang: string;
 };
 
 export default function MobileNav({ links, currentLang }: MobileNavProps ) {

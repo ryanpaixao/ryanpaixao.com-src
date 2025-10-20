@@ -7,8 +7,7 @@ const dictionaries = {
   pt: () => import('@/public/pt.json').then((module) => module.default),
 };
 
-type Locale = keyof typeof dictionaries;
-
-export const getDictionary = async (locale: Locale): Promise<Dictionary> => {
-  return dictionaries[locale]?.() ?? dictionaries.en();
+export const getDictionary = async (locale: string): Promise<Dictionary> => {
+  const loader = (dictionaries as unknown as Record<string, () => Promise<Dictionary>>)[locale] ?? dictionaries.en;
+  return loader();
 };

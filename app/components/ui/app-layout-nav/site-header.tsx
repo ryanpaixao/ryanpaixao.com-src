@@ -1,10 +1,10 @@
-import { Dictionary, AvailableLanguages } from '@/app/lib/definitions';
+import { Dictionary } from '@/app/lib/definitions';
 import DesktopNav from './desktop-nav';
 import MobileNav from './mobile-nav';
 
 type SiteHeaderProps = {
   dict: Dictionary;
-  currentLang: AvailableLanguages;
+  currentLang: string;
 }
 
 export default function SiteHeader({ dict, currentLang }: SiteHeaderProps) {

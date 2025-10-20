@@ -11,7 +11,7 @@ interface Project {
   description: string;
   stack: string;
   siteHref: string;
-  githubUrls: [string];
+  githubUrls: string[];
 };
 
 export type Dictionary = {
@@ -28,7 +28,7 @@ export type Dictionary = {
   interactiveCodeEditor: {
     aboutMeFile: string;
     skipCTA: string;
-    codeSnippets: [string];
+    codeSnippets: string[];
   },
   homePage: {
     hello: string;
@@ -38,12 +38,12 @@ export type Dictionary = {
   },
   aboutPage: {
     pageHeaderTitle: string;
-    aboutParagraphs: [string];
+    aboutParagraphs: string[];
   },
   experiencePage: {
     pageHeaderTitle: string;
     type: string;
-    experiences: [Experience]
+    experiences: Experience[]
   },
   projectsPage: {
     pageHeaderTitle: string;
