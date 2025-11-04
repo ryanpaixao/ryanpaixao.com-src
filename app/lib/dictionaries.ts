@@ -3,8 +3,8 @@ import 'server-only';
 import { Dictionary } from '@/app/lib/definitions';
 
 const dictionaries = {
-  en: () => import('@/public/en.json').then((module) => module.default),
-  pt: () => import('@/public/pt.json').then((module) => module.default),
+  en: () => import('@/public/lang/en.json').then((module) => module.default),
+  pt: () => import('@/public/lang/pt.json').then((module) => module.default),
 };
 
 export const getDictionary = async (locale: string): Promise<Dictionary> => {
