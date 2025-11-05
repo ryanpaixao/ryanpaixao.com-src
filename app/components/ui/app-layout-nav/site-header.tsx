@@ -29,7 +29,7 @@ export default function SiteHeader({ dict, currentLang }: SiteHeaderProps) {
   ];
 
   return (
-    <header className='w-full border-b fixed bg-gray-100 dark:bg-gray-600'>
+    <header className='w-full border-b fixed z-10 bg-gray-100 dark:bg-gray-600'>
       <div className='flex h-14 items-center px-4'>
         <DesktopNav links={LINKS} currentLang={currentLang} />
         <MobileNav links={LINKS} currentLang={currentLang} />
