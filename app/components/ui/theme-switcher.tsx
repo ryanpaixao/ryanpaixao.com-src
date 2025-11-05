@@ -19,8 +19,10 @@ export default function ThemeSwitcher() {
   if (!mounted) return <SkeletonToggle />;
 
   return (
-    <Button size='icon' variant='ghost' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
-      {theme === 'dark' ? <MoonIcon /> : <SunIcon />}
-    </Button>
+    <div className="flex items-center">
+      <Button size='icon' variant='ghost' onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+        {theme === 'dark' ? <MoonIcon /> : <SunIcon />}
+      </Button>
+    </div>
   );
 }
