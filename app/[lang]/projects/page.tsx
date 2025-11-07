@@ -3,6 +3,7 @@ import Link from "next/link";
 import { LangParams } from '@/app/lib/definitions';
 import { getDictionary } from "@/app/lib/dictionaries";
 import PageHeaderTitle from '@/app/components/ui/page-header-title';
+import PageContentWrapper from "@/app/components/ui/page-content-wrapper";
 
 interface ProjectsPageProps {
   params: LangParams;
@@ -21,7 +22,7 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
   ];
 
   return (
-    <div>
+    <PageContentWrapper>
       <PageHeaderTitle>
         {dict.projectsPage.pageHeaderTitle}
       </PageHeaderTitle>
@@ -91,6 +92,6 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
           )
         })}
       </ol>
-    </div>
+    </PageContentWrapper>
   );
 }

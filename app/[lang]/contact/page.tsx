@@ -2,6 +2,7 @@ import UiLink from "@/app/components/ui/ext-link";
 import PageHeaderTitle from '@/app/components/ui/page-header-title';
 import { LangParams } from "@/app/lib/definitions";
 import { getDictionary } from "@/app/lib/dictionaries";
+import PageContentWrapper from "@/app/components/ui/page-content-wrapper";
 
 interface ContactPageProps {
   params: LangParams;
@@ -12,7 +13,7 @@ export default async function ContactPage({ params }: ContactPageProps) {
   const dict = await getDictionary(lang);
 
   return (
-    <div>
+    <PageContentWrapper>
       <PageHeaderTitle>
         {dict.contactPage.pageHeaderTitle}
       </PageHeaderTitle>
@@ -54,6 +55,6 @@ export default async function ContactPage({ params }: ContactPageProps) {
           </div>
         </li>
       </ol>
-    </div>
+    </PageContentWrapper>
   );
 }
