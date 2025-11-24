@@ -129,6 +129,10 @@
   --text-secondary: #888;
 }
 
+.hero-content h1 {
+    font-size: 2rem;
+  }
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .interactive-code-editor {
@@ -143,10 +147,7 @@
   .code-display {
     font-size: 12px;
   }
-  
-  .hero-content h1 {
-    font-size: 2rem;
-  }
+
 }
 
 @media (max-width: 480px) {
