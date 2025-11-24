@@ -26,7 +26,7 @@ export default function DesktopNav({ links, currentLang }: DesktopNavProps) {
   const [mounted, setMounted] = useState(false);
   const { theme } = useTheme();
   const logo = theme === 'dark'
-    ? "/images/rp-logo-font-white.svg"
+    ? "/images/rp-logo-font-white.webp"
     : "/images/rp-logo-font-black.svg"
 
   // Ensure component is mounted to avoid hydration mismatch
